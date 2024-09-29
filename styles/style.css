@@ -185,6 +185,14 @@
   inset-inline-end: clamp(0.75rem, 0.571rem + 0.755vw, 1.25rem);
 }
 
+@supports ((text-stroke: 1px var(--background-color, #000000)) or (-webkit-text-stroke: 1px var(--background-color, #000000))) {
+  .card-image-label {
+    -webkit-text-stroke: 1px var(--background-color, #000000);
+    text-stroke: 1px var(--background-color, #000000);
+    text-shadow: none;
+  }
+}
+
 .card-content,
 .card-buttons {
   display: flex;
@@ -279,7 +287,6 @@
   height: 39px;
   margin-inline-end: 4px;
   border: 2px solid transparent;
-  padding: none;
   padding: 0px;
   background-color: transparent;
   transition: 0.3s ease;
@@ -393,7 +400,6 @@
   border: 2px solid var(--accent-color, #00cc14);
   padding: 30px;
   background-color: var(--background-color, #000000);
-  transition: opacity 0.3s ease-in-out;
 }
 
 .dialog::backdrop {

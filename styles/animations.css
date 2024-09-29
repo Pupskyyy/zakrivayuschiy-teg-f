@@ -24,9 +24,6 @@
 }
 
 @keyframes like-check {
-  0% {
-  }
-
   100% {
     transform: scale(1.5);
   }
