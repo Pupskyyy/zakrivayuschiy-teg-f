@@ -435,6 +435,10 @@
   padding: 9px 17px;
 }
 
+.button__text-ok {
+  text-transform: uppercase;
+}
+
 @media (width <= 375px) {
   .rubber-block {
     width: 100%;
