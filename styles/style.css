@@ -390,7 +390,7 @@
   filter: grayscale(1);
 }
 
-.dialog {
+.dialog[open] {
   position: fixed;
   inset: 0;
   display: flex;
@@ -404,11 +404,6 @@
 
 .dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-}
-
-.dialog:not([open]) {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .dialog-description {
