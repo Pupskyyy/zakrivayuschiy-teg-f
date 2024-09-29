@@ -183,12 +183,16 @@
   mix-blend-mode: hard-light;
   inset-block-start: 25px;
   inset-inline-end: clamp(0.75rem, 0.571rem + 0.755vw, 1.25rem);
+  paint-order: stroke fill;
 }
 
-@supports ((text-stroke: 1px var(--background-color, #000000)) or (-webkit-text-stroke: 1px var(--background-color, #000000))) {
+@supports (
+  (text-stroke: 2px var(--background-color, #000000)) or
+    (-webkit-text-stroke: 2px var(--background-color, #000000))
+) {
   .card-image-label {
-    -webkit-text-stroke: 1px var(--background-color, #000000);
-    text-stroke: 1px var(--background-color, #000000);
+    -webkit-text-stroke: 2px var(--background-color, #000000);
+    text-stroke: 2px var(--background-color, #000000);
     text-shadow: none;
   }
 }
