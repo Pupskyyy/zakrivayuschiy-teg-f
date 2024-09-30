@@ -35,8 +35,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
-  height: clamp(20.438rem, 19.535rem + 4.331vw, 23rem);
   margin: 100px 0px;
   border: 2px solid var(--accent-color, #00cc14);
   padding-block-start: clamp(7.063rem, 6.547rem + 2.17vw, 8.5rem);
@@ -51,24 +49,22 @@
   );
 }
 
-.logo-group {
-  text-align: center;
-  text-decoration: none;
-}
-
-.header-main-title {
+.logo {
   margin-block-end: clamp(0.75rem, 0.571rem + 0.755vw, 1.25rem);
   font-family: var(--accent-font-family, PressStart2P, monospace, sans-serif);
   font-weight: 400;
   font-size: clamp(3.063rem, 2.704rem + 1.509vw, 4.063rem);
   line-height: 65px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-.header-subtitle {
+.header-title {
   font-family: var(--accent-font-family, PressStart2P, monospace, sans-serif);
   font-weight: 400;
   font-size: clamp(0.875rem, 0.673rem + 0.849vw, 1.438rem);
   text-transform: uppercase;
+  margin-block-end: 25px;
 }
 
 .theme-menu__list {
@@ -166,6 +162,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center
 }
 
 .card-image-label {
@@ -247,9 +244,10 @@
   align-items: center;
   gap: 8px;
   min-height: 55px;
-  margin-block-start: 50px;
   margin-block-end: 103px;
   padding: 15px 20px;
+  width: fit-content;
+  align-self: center;
 }
 
 .button:focus {
@@ -312,6 +310,7 @@
 }
 
 .card__icon-button:hover .core {
+  transition: 0.3s linear;
   fill: var(--like-icon-contour-color, #00cc14);
 }
 
@@ -355,42 +354,42 @@
 
 .like-icon.is-liked .heart {
   transform-origin: center;
-  animation: like-check 0.3s ease-in 0.1s backwards;
+  animation: like-check 0.3s alternate ease-in 0.1s;
 }
 
 .like-icon.is-liked .sparks {
-  animation: like-sparks-check 0.3s ease-in 0.3s backwards;
+  animation: like-sparks-check 0.3s alternate ease-in 0.3s;
 }
 
-.image-anticipation {
+.filter-sepia {
   filter: sepia(60%);
 }
 
-.image-combination {
+.filter-hue-rotate {
   filter: hue-rotate(60deg);
 }
 
-.image-cute {
+.filter-saturate {
   filter: saturate(158%);
 }
 
-.image-walk {
+.filter-hue-rotate-contrast-brightness {
   filter: hue-rotate(40deg) contrast(100%) brightness(1.5);
 }
 
-.image-unexpectedly {
+.filter-brightness {
   filter: brightness(1.3);
 }
 
-.image-rest {
+.filter-invert {
   filter: invert(30%);
 }
 
-.image-job {
+.filter-blur {
   filter: blur(1px);
 }
 
-.image-end {
+.filter-grayscale {
   filter: grayscale(1);
 }
 
@@ -446,7 +445,6 @@
   .save-button {
     flex-direction: column;
     gap: 8px;
-    margin-block-start: 52px;
     margin-block-end: 100px;
   }
 

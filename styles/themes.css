@@ -6,8 +6,6 @@
 */
 
 :root.theme-dark {
-  --page-font-family: Inter-Variable, monospace, sans-serif;
-  --accent-font-family: PressStart2P, monospace, sans-serif;
   --page-font-weight: 465;
   --accent-font-weight: 785;
   --background-color: #000000;
@@ -27,8 +25,6 @@
 }
 
 :root.theme-light {
-  --page-font-family: Inter-Variable, monospace, sans-serif;
-  --accent-font-family: PressStart2P, monospace, sans-serif;
   --page-font-weight: 400;
   --accent-font-weight: 700;
   --background-color: #ffffff;
@@ -49,8 +45,6 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --page-font-family: Inter-Variable, monospace, sans-serif;
-    --accent-font-family: PressStart2P, monospace, sans-serif;
     --page-font-weight: 400;
     --accent-font-weight: 700;
     --background-color: #ffffff;
