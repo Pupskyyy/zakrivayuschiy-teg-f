@@ -208,6 +208,7 @@
 .card-text {
   margin-block-end: 27px;
   font-variation-settings: "wght" var(--page-font-weight, 465);
+  line-height: 21px;
 }
 
 .card-text:last-of-type {
